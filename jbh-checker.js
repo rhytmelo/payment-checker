@@ -6,7 +6,7 @@
     const paymentURL = "https://rhytmelo.com/defaulter-payment";
     const contactURL = "https://rhytmelo.com/contact-us";
     const paymentDone = false; // Set based on your payment logic
-    const paymentDueDate = new Date('2024-10-06'); // Replace with the actual due date
+    const paymentDueDate = new Date('2023-10-06'); // Replace with the actual due date
     
     const MS_PER_DAY = 1000 * 3600 * 24; // Milliseconds in a day
     const now = new Date();
