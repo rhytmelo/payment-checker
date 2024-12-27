@@ -6,7 +6,7 @@
     const paymentURL = "https://rhytmelo.com/defaulter-payment";
     const contactURL = "https://rhytmelo.com/contact-us";
     const paymentDone = false; // Set based on your payment logic
-    const paymentDueDate = new Date('2023-10-06'); // Replace with the actual due date
+    const paymentDueDate = new Date('2024-10-06'); // Replace with the actual due date
     
     const MS_PER_DAY = 1000 * 3600 * 24; // Milliseconds in a day
     const now = new Date();
@@ -34,7 +34,7 @@
             const checker = document.getElementById(checkerId);
             if (!checker) {
                 console.error(`The payment for your bill RDA-UP/23-24/0003 has been overdue by ${daysDifference} days. A defaulter payment banner reminder is now displayed. If you believe this is an error, please contact us at: ${contactURL}`);
-                displayBanner(); //Removing display banner will require level A permisions. Mail Chain should be attached in JIRA and Jira Number should be mentioned belwo:
+                //displayBanner(); //Removing display banner will require level A permisions. Mail Chain should be attached in JIRA and Jira Number should be mentioned belwo:
                 // JIRA Number: EA-12084
             }
         }
