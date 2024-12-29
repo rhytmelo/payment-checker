@@ -5,14 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rhytmelo Designs | Defaulter Notification System</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const currentYear = new Date().getFullYear();
+            const footer = document.querySelector("footer .container");
+            footer.innerHTML = `
+                <p class="text-sm">&copy; ${currentYear} Designed & Developed by RHYTMELO DESIGNS</p>
+                <p class="text-sm mt-2">Empowering businesses with innovative solutions for a better tomorrow.</p>
+            `;
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Disable right-click and copying
+            document.addEventListener('contextmenu', event => event.preventDefault());
+            document.addEventListener('keydown', event => {
+                if (event.ctrlKey && (event.key === 'u' || event.key === 's' || event.key === 'p' || event.key === 'a' || event.key === 'c')) {
+                    event.preventDefault();
+                }
+            });
+        });
+
+        // Additional security measures
+        window.addEventListener('load', () => {
+            if (window.self !== window.top) {
+                window.top.location = window.self.location;
+            }
+        });
+    </script>
+    <style>
+        /* Invert logo colors to make it white */
+        .invert-logo {
+            filter: invert(1) brightness(2);
+        }
+    </style>
 </head>
 <body class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white font-sans">
     <!-- Header -->
     <header class="bg-gray-800 shadow-lg sticky top-0 z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="https://rhytmelo.com/" class="flex items-center space-x-3">
-                <img src="https://rhytmelo.com/grunolra/2024/08/Rhytmelo-llc-ai-2048x444.png" alt="Rhytmelo Designs Logo" class="h-10">
-                <span class="text-3xl font-extrabold text-gradient bg-gradient-to-r from-cyan-500 to-blue-500">Rhytmelo Designs</span>
+                <img src="https://rhytmelo.com/grunolra/2024/08/Rhytmelo-llc-ai-2048x444.png" alt="Rhytmelo Designs Logo" class="h-10 invert-logo">
+                <span class="text-3xl font-extrabold text-gradient bg-gradient-to-r from-cyan-500 to-blue-500"></span>
             </a>            
             <nav>
                 <ul class="flex space-x-6">
