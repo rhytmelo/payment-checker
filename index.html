@@ -49,8 +49,21 @@
             <a href="https://rhytmelo.com/" class="flex items-center space-x-3">
                 <img src="https://rhytmelo.com/grunolra/2024/08/Rhytmelo-llc-ai-2048x444.png" alt="Rhytmelo Designs Logo" class="h-10 invert-logo">
             </a>
-            <div class="menu-icon">&#9776;</div>
-            <nav>
+            <!-- Menu Icon for Mobile and Tablets -->
+            <div class="menu-icon text-white text-base block md:hidden cursor-pointer" onclick="toggleDrawer()">&#9776;</div>
+            <!-- Drawer Navigation -->
+            <div id="drawer" class="fixed top-0 left-0 w-64 h-full bg-gray-800 shadow-lg transform -translate-x-full transition-transform md:hidden">
+                <button class="text-white text-xl p-4" onclick="toggleDrawer()">&times;</button>
+                <nav class="mt-8">
+                    <ul class="space-y-4 text-center">
+                        <li><a href="https://rhytmelo.com" class="text-white hover:text-cyan-400">Home</a></li>
+                        <li><a href="https://rhytmelo.com/services/" class="text-white hover:text-cyan-400">Services</a></li>
+                        <li><a href="https://rhytmelo.com/contact/" class="text-white hover:text-cyan-400">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Regular Navigation for Desktop -->
+            <nav class="hidden md:flex">
                 <ul class="flex space-x-6">
                     <li><a href="https://rhytmelo.com" class="text-white hover:text-cyan-400">Home</a></li>
                     <li><a href="https://rhytmelo.com/services/" class="text-white hover:text-cyan-400">Services</a></li>
@@ -83,5 +96,16 @@
             <p class="text-sm mt-2">Empowering businesses with innovative solutions for a better tomorrow.</p>
         </div>
     </footer>
+
+    <script>
+        function toggleDrawer() {
+            const drawer = document.getElementById('drawer');
+            if (drawer.classList.contains('-translate-x-full')) {
+                drawer.classList.remove('-translate-x-full');
+            } else {
+                drawer.classList.add('-translate-x-full');
+            }
+        }
+    </script>
 </body>
 </html>
