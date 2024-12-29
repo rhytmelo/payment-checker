@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rhytmelo Designs | Defaulter Notification System</title>
-    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const currentYear = new Date().getFullYear();
@@ -40,12 +41,6 @@
             }
         });
     </script>
-    <style>
-        /* Invert logo colors to make it white */
-        .invert-logo {
-            filter: invert(1) brightness(2);
-        }
-    </style>
 </head>
 <body class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white font-sans">
     <!-- Header -->
@@ -56,10 +51,10 @@
             </a>
             <div class="menu-icon">&#9776;</div>
             <nav>
-                <ul>
-                    <li><a href="https://rhytmelo.com">Home</a></li>
-                    <li><a href="https://rhytmelo.com/services/">Services</a></li>
-                    <li><a href="https://rhytmelo.com/contact/">Contact</a></li>
+                <ul class="flex space-x-6">
+                    <li><a href="https://rhytmelo.com" class="text-white hover:text-cyan-400">Home</a></li>
+                    <li><a href="https://rhytmelo.com/services/" class="text-white hover:text-cyan-400">Services</a></li>
+                    <li><a href="https://rhytmelo.com/contact/" class="text-white hover:text-cyan-400">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -67,14 +62,18 @@
 
     <!-- Main Section -->
     <main class="container mx-auto px-6 py-16 text-center">
-        <h1 class="text-5xl md:text-7xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-blue-500 mb-6">Defaulter Notification System</h1>
+        <h1 class="text-5xl md:text-7xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-blue-500 mb-6">
+            Defaulter Notification System
+        </h1>
         <p class="text-lg md:text-xl max-w-4xl mx-auto leading-relaxed mb-8">
             Rhytmelo Designs is excited to introduce a new feature to help manage overdue payments. This system will automatically monitor payment statuses, ensuring seamless and transparent payment processes for your business.
         </p>
         <p class="text-lg md:text-xl max-w-4xl mx-auto leading-relaxed mb-8">
             From the due date up to 100 days, a warning will appear in the browser console for any overdue payments. Beyond 100 days, a banner will be displayed on your website as a persistent reminder to settle the dues.
         </p>
-        <a href="#contact" class="inline-block bg-gradient-to-r from-cyan-500 to-blue-500 text-lg font-bold text-white py-3 px-8 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transform transition">Contact Us for More Information</a>
+        <a href="#contact" class="inline-block bg-gradient-to-r from-cyan-500 to-blue-500 text-lg font-bold text-white py-3 px-8 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transform transition">
+            Contact Us for More Information
+        </a>
     </main>
 
     <!-- Footer -->
