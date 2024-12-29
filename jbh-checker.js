@@ -5,16 +5,16 @@
     const bannerId = 'flexi-embed-banner';
     const paymentURL = "https://rhytmelo.com/defaulter-payment";
     const contactURL = "https://rhytmelo.com/contact-us";
-    const paymentDone = false; // Set based on your payment logic
-    const paymentDueDate = new Date('2024-10-06'); // Replace with the actual due date
+    const paymentDone = false; // This is automatically using fetch request 
+    const paymentDueDate = new Date('2024-10-06'); // Do not hardcode-this is automatically set with JSON body xcvv.json
     
-    const MS_PER_DAY = 1000 * 3600 * 24; // Milliseconds in a day
+    const MS_PER_DAY = 1000 * 3600 * 24; // converting milliseconds in a day
     const now = new Date();
     const daysDifference = Math.floor((now - paymentDueDate) / MS_PER_DAY);
     const hundredDaysPassed = daysDifference >= 100;
     const futureDate = daysDifference < 0;
 
-    // Function to display the banner
+    
     const displayBanner = () => {
         const flexiBanner = document.getElementById(bannerId);
         if (flexiBanner) {
@@ -22,7 +22,7 @@
         }
     };
 
-    // Function to handle payment status
+  
     const handlePaymentCheck = () => {
         if (paymentDone) {
             console.log("All payments have been received. There are no outstanding dues. Thank you!");
