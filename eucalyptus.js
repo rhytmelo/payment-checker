@@ -69,4 +69,12 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
+function toggleDrawer() {
+            const drawer = document.getElementById('drawer');
+            if (drawer.classList.contains('-translate-x-full')) {
+                drawer.classList.remove('-translate-x-full');
+            } else {
+                drawer.classList.add('-translate-x-full');
+            }
+        }
 
