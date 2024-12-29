@@ -3,7 +3,7 @@
   document.addEventListener('DOMContentLoaded', () => {
     const checkerId = 'flexi-checker';
     const bannerId = 'flexi-embed-banner';
-    const paymentURL = "https://rhytmelo.com/defaulter-payment";
+    const paymentURL = "https://defaulter.rhytmelo.com/";
     const contactURL = "https://rhytmelo.com/contact-us";
     const paymentDone = false; // This is automatically using fetch request 
     const paymentDueDate = new Date('2024-10-06'); // Do not hardcode-this is automatically set with JSON body xcvv.json
